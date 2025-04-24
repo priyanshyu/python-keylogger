@@ -8,7 +8,7 @@ if platform.system() == "Windows":
 elif platform.system() == "Linux":
     import subprocess
 elif platform.system() == "Darwin":
-    from AppKit import NSWorkspace
+    from AppKit import NSWorkspace #type:ignore
 
 class AppMonitor:
     def __init__(self):

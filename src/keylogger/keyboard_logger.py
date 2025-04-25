@@ -3,7 +3,7 @@ from datetime import datetime
 import threading
 from data_storage import DataStorage
 
-class KeyLogger:
+class KeyboardLogger:
     def __init__(self, output_path="keylogs.json"):
         self.output_path = output_path
         self.data_storage = DataStorage(output_path)  # Using DataStorage with a separate file
@@ -44,7 +44,7 @@ class KeyLogger:
         t.start()
 
 if __name__ == "__main__":
-    logger = KeyLogger(output_path="keylogs.json")
+    logger = KeyboardLogger(output_path="keylogs.json")
     logger.run_listener()
 
     while True:

@@ -1,7 +1,7 @@
 import threading
 from pynput import mouse
 from datetime import datetime
-from data_storage import DataStorage
+from keylogger.data_storage import DataStorage
 
 class MouseLogger:
     def __init__(self, output_path="mouse_logs.json"):

